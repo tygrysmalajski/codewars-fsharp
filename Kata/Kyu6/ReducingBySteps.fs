@@ -1,5 +1,7 @@
 ﻿namespace Kata.Kyu6
 
+// https://www.codewars.com/kata/56efab15740d301ab40002ee
+
 module ReducingBySteps =
 
     open NUnit.Framework

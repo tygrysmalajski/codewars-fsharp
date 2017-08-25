@@ -1,5 +1,7 @@
 ﻿namespace Kata.Kyu7
 
+// https://www.codewars.com/kata/56541980fa08ab47a0000040
+
 module PrinterErrors =
 
     open NUnit.Framework

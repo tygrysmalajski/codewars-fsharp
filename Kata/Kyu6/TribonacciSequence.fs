@@ -1,5 +1,7 @@
 ﻿namespace Kata.Kyu6
 
+// https://www.codewars.com/kata/556deca17c58da83c00002db
+
 module TribonacciSequence =
 
     open NUnit.Framework
@@ -25,4 +27,4 @@ module TribonacciSequence =
         tribonacci [1;2;3] 10 |> should equal [1;2;3;6;11;20;37;68;125;230]
         tribonacci [3;2;1] 10 |> should equal [3;2;1;6;9;16;31;56;103;190]
         tribonacci [1;1;1] 1 |> should equal [1]
-        tribonacci [300;200;100] 0 |> should equal []
+        tribonacci [300;200;100] 0 |> should be Empty

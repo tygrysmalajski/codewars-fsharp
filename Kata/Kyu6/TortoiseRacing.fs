@@ -1,5 +1,7 @@
 ﻿namespace Kata.Kyu6
 
+// https://www.codewars.com/kata/55e2adece53b4cdcb900006c
+
 module TortoiseRacing =
 
     open NUnit.Framework
@@ -12,13 +14,17 @@ module TortoiseRacing =
             Seq.unfold 
                 (fun (distance1, distance2) -> 
                     let time = distance1 / float(v2)
-                    if distance2 < distance1 then Some(time, (distance1+delta1, distance2+delta2)) 
-                    else None) (float(g), 0.0)
+                    if distance2 < distance1 then 
+                        Some(time, (distance1+delta1, distance2+delta2)) 
+                    else 
+                        None
+                ) (float(g), 0.0)
             |> Seq.last
             |> (fun t -> 
                 let time = System.TimeSpan.FromHours(t)
                 Some([time.Hours; time.Minutes; time.Seconds]))
-        else None
+        else 
+            None
 
     [<Test>]
     let ``Tortoise racing`` () =

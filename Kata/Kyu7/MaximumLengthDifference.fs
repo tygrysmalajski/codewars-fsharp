@@ -1,5 +1,7 @@
 ﻿namespace Kata.Kyu7
 
+// https://www.codewars.com/kata/5663f5305102699bad000056
+
 module MaximumLengthDifference =
 
     open NUnit.Framework
