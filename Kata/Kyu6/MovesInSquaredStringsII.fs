@@ -8,14 +8,12 @@ open Kata.Kyu7.MovesInSquaredStringsI
 
 module MovesInSquaredStringsII =
     let private append f1 f2 (ss: seq<string>) =  Seq.append (f1 ss) (f2 ss)
-
     let private dot = 
         let appendDots (s: string) = s + ("." |> String.replicate s.Length)
         Seq.map appendDots
 
     let rot = vertMirror >> horMirror
-
-    let selfieAndRot ss = ss |> (append dot (dot >> rot))
+    let selfieAndRot = append dot (dot >> rot)
 
     [<Test>]
     let ``Moves in squared strings II`` () =

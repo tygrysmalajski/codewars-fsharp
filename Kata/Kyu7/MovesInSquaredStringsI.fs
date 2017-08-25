@@ -6,8 +6,7 @@ open NUnit.Framework
 open Kata.MovesInSquaredStrings
 
 module MovesInSquaredStringsI =
-    let vertMirror (ss: seq<string>) = ss |> Seq.map (mapString Array.rev)
-
+    let vertMirror = Seq.map (mapString Array.rev)
     let horMirror = Seq.rev
 
     [<Test>]
