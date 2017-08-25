@@ -42,11 +42,11 @@ module AreTheyTheSame =
 
         let a8 = [10000000; 100000000]
         let a9 = [276447232; 1874919424]
-        comp (a8, a9) |> should be False
+        comp (a8, a9) |> should be True
 
         let a10 = [10000001; 100000000]
         let a11 = [276447232; 1874919424]
-        comp (a10, a11) |> should be True
+        comp (a10, a11) |> should be False
 
         let a12 = [2; 2; 3]
         let a13 = [4; 9; 9]
