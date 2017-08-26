@@ -10,7 +10,7 @@ module MovesInSquaredStringsI =
     let horMirror = Seq.rev
 
     [<Test>]
-    let ``Moves in squared strings I`` () =
+    let ``Moves in squared strings (I)`` () =
         let assertVertMirror = assertOper vertMirror
         let assertHorMirror = assertOper horMirror
 

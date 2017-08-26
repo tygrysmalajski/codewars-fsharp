@@ -2,11 +2,10 @@
 
 // https://www.codewars.com/kata/556deca17c58da83c00002db
 
+open NUnit.Framework
+open FsUnit
+
 module TribonacciSequence =
-
-    open NUnit.Framework
-    open FsUnit
-
     let tribonacci signature n = 
         let seed = match signature with | [x;y;z] -> (x,y,z) | _ -> (0,0,0)
         (signature |> Seq.append <| Seq.unfold

@@ -65,6 +65,7 @@
     <Compile Include="Kyu6\TribonacciSequence.fs" />
     <Compile Include="Kyu6\MovesInSquaredStringsII.fs" />
     <Compile Include="Kyu6\MovesInSquaredStringsIII.fs" />
+    <Compile Include="Kyu6\MovesInSquaredStringsIV.fs" />
     <Compile Include="Kyu6\AreTheyTheSame.fs" />
     <Compile Include="Program.fs" />
     <None Include="App.config" />

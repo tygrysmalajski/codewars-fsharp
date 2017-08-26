@@ -2,11 +2,10 @@
 
 // https://www.codewars.com/kata/563b662a59afc2b5120000c6
 
+open NUnit.Framework
+open FsUnit
+
 module PopulationGrowth =
-
-    open NUnit.Framework
-    open FsUnit
-
     let nbYear (p0: int) (percent: float) (aug: int) (p: int) =
         let per = percent / 100.0
         let grow (population, years) = 
@@ -24,3 +23,7 @@ module PopulationGrowth =
         assertGrowth 1500 5.0 100 5000 15
         assertGrowth 1500000 2.5 10000 2000000 10
         assertGrowth 1500000 0.25 1000 2000000 94
+        assertGrowth 1500000 0.25 -1000 2000000 151
+        assertGrowth 1500000 0.25 1 2000000 116
+        assertGrowth 1500000 0.0 10000 2000000 50
+        assertGrowth 1000 2.0 50 1214 4

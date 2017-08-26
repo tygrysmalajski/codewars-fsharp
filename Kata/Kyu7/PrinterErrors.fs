@@ -2,11 +2,10 @@
 
 // https://www.codewars.com/kata/56541980fa08ab47a0000040
 
+open NUnit.Framework
+open FsUnit
+
 module PrinterErrors =
-
-    open NUnit.Framework
-    open FsUnit
-
     let printerError(s: string) =
         let colors = seq['a'..'m']
         let isError c = colors |> Seq.exists((=) c) |> not

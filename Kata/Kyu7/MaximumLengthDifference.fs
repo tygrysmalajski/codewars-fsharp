@@ -2,11 +2,10 @@
 
 // https://www.codewars.com/kata/5663f5305102699bad000056
 
+open NUnit.Framework
+open FsUnit
+
 module MaximumLengthDifference =
-
-    open NUnit.Framework
-    open FsUnit
-
     let maxLengthDiff (xs: string[]) (ys: string[]) =
         let minMaxLength (xs: string[]) =
             let lengths = xs |> Seq.map (fun x -> x.Length)
@@ -32,3 +31,15 @@ module MaximumLengthDifference =
         let s3 = [||]
         let s4 = [|"cccooommaaqqoxii"; "gggqaffhhh"; "tttoowwwmmww"|]
         assertMaxLengthDiff s3 s4 None
+        let s5 = [|"ccct"; "tkkeeeyy"; "ggiikffsszzoo"; "nnngssddu"; "rrllccqqqqwuuurdd"; "kkbbddaakkk"|]
+        let s6 = [|"tttxxxxxxgiiyyy"; "ooorcvvj"; "yzzzhhhfffaaavvvpp"; "jjvvvqqllgaaannn"; "tttooo"; "qmmzzbhhbb"|]
+        assertMaxLengthDiff s5 s6 (Some 14)
+        let s7 = [||]
+        let s8 = [|"cccooommaaqqoxii"; "gggqaffhhh"; "tttoowwwmmww"|]
+        assertMaxLengthDiff s7 s8 None
+        let s9 = [|"cccooommaaqqoxii"; "gggqaffhhh"; "tttoowwwmmww"|]
+        let s10 = [||]
+        assertMaxLengthDiff s9 s10 None
+        let s11 = [||]
+        let s12 = [||]
+        assertMaxLengthDiff s11 s12 None

@@ -16,7 +16,7 @@ module MovesInSquaredStringsII =
     let selfieAndRot = append dot (dot >> rot)
 
     [<Test>]
-    let ``Moves in squared strings II`` () =
+    let ``Moves in squared strings (II)`` () =
         let assertRot = assertOper rot
         let assertSelfieAndRot = assertOper selfieAndRot
 

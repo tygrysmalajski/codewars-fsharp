@@ -6,24 +6,31 @@ open NUnit.Framework
 open Kata.MovesInSquaredStrings
 
 module MovesInSquaredStringsIII =
-    let private zipMap f1 f2 (ss: seq<string>) = 
-        Seq.zip (f1 ss) (f2 ss)
-        |> Seq.map (fun (l, r) -> l + "|" + r)
+    let private zipN xs = xs |> (Seq.collect Seq.indexed >> Seq.groupBy fst >> Seq.map (snd >> Seq.map snd))
+    
+    let private zipMap fs sep (ss: seq<string>) = 
+        fs 
+        |> Seq.map (fun f -> f ss)
+        |> zipN
+        |> Seq.map (Seq.chunkBySize (Seq.length fs))
+        |> Seq.collect (Seq.map (String.concat sep))
 
     let private transpose ss = 
         let rec transpose' acc = function
             | s::_ when System.String.IsNullOrWhiteSpace s -> List.rev acc
             | ss -> transpose' ((List.map (mapString2 Array.head) ss)::acc) (List.map (mapString Array.tail) ss)
         transpose' [] (ss |> Seq.toList)
-        |> Seq.map (Seq.ofList)
+        |> Seq.map Seq.ofList
 
     let private transposeMap mapping = transpose >> (Seq.map mapping)
+
+    let zipConcat fs = zipMap fs "|"
     let diag1Sym = transposeMap (Seq.reduce (+))
     let rot90Clock = transposeMap (Seq.rev >> Seq.reduce(+))
-    let selfieAndDiag1 = zipMap id diag1Sym
+    let selfieAndDiag1 = zipConcat [id; diag1Sym]
 
     [<Test>]
-    let ``Moves in squared strings III`` () =
+    let ``Moves in squared strings (III)`` () =
         let assertDiag1Sym = assertOper diag1Sym
         let assertRot90Clock = assertOper rot90Clock
         let assertSelfieAndDiag1 = assertOper selfieAndDiag1

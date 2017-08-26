@@ -2,11 +2,10 @@
 
 // https://www.codewars.com/kata/56efab15740d301ab40002ee
 
+open NUnit.Framework
+open FsUnit
+
 module ReducingBySteps =
-
-    open NUnit.Framework
-    open FsUnit
-
     let operArray fct arr init =
         let rec loop prev acc = function
             | [] -> List.rev acc
