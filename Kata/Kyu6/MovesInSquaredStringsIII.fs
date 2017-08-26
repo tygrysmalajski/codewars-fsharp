@@ -3,7 +3,7 @@
 // https://www.codewars.com/kata/moves-in-squared-strings-iii
 
 open NUnit.Framework
-open Kata.MovesInSquaredStrings
+open Kata.Kyu7.MovesInSquaredStringsI
 
 module MovesInSquaredStringsIII =
     let private zipN xs = xs |> (Seq.collect Seq.indexed >> Seq.groupBy fst >> Seq.map (snd >> Seq.map snd))

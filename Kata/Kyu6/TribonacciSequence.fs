@@ -6,15 +6,7 @@ open NUnit.Framework
 open FsUnit
 
 module TribonacciSequence =
-    let tribonacci signature n = 
-        let seed = match signature with | [x;y;z] -> (x,y,z) | _ -> (0,0,0)
-        (signature |> Seq.append <| Seq.unfold
-        (fun (x,y,z) -> 
-            let el = x+y+z
-            Some(el, (y,z,el))
-        ) seed)
-        |> Seq.truncate n
-        |> Seq.toList
+    let tribonacci = FibonacciTribonacciAndFriends.xbonacci
 
     [<Test>]
     let ``Tribonacci Sequence`` () =
@@ -27,3 +19,5 @@ module TribonacciSequence =
         tribonacci [3;2;1] 10 |> should equal [3;2;1;6;9;16;31;56;103;190]
         tribonacci [1;1;1] 1 |> should equal [1]
         tribonacci [300;200;100] 0 |> should be Empty
+
+    

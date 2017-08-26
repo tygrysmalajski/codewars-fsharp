@@ -2,10 +2,24 @@
 
 // https://www.codewars.com/kata/moves-in-squared-strings-i
 
+open FsUnit
 open NUnit.Framework
-open Kata.MovesInSquaredStrings
 
 module MovesInSquaredStringsI =
+    let mapString (mapping: char[] -> char[]) (s: string) = new string((s.ToCharArray()) |> mapping)
+    let mapString2 (mapping: char[] -> char) = mapString (mapping >> (fun x -> [|x|]))
+    let apply (map: seq<string> -> seq<string>) =
+        let split (s: string) = s.Split([||])
+        let concat = String.concat "\n"
+        split 
+        >> map
+        >> concat
+
+    let oper fct s = fct s
+
+    let assertOper oper s expected =
+        s |> apply oper |> should equal expected
+
     let vertMirror = Seq.map (mapString Array.rev)
     let horMirror = Seq.rev
 

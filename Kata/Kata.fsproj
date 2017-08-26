@@ -55,13 +55,13 @@
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
-    <Compile Include="MovesInSquaredStrings.fs" />
     <Compile Include="Kyu7\MaximumLengthDifference.fs" />
     <Compile Include="Kyu7\PrinterErrors.fs" />
     <Compile Include="Kyu7\PopulationGrowth.fs" />
     <Compile Include="Kyu7\MovesInSquaredStringsI.fs" />
     <Compile Include="Kyu6\TortoiseRacing.fs" />
     <Compile Include="Kyu6\ReducingBySteps.fs" />
+    <Compile Include="Kyu6\FibonacciTribonacciAndFriends.fs" />
     <Compile Include="Kyu6\TribonacciSequence.fs" />
     <Compile Include="Kyu6\MovesInSquaredStringsII.fs" />
     <Compile Include="Kyu6\MovesInSquaredStringsIII.fs" />

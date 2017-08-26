@@ -3,7 +3,6 @@
 // https://www.codewars.com/kata/moves-in-squared-strings-ii
 
 open NUnit.Framework
-open Kata.MovesInSquaredStrings
 open Kata.Kyu7.MovesInSquaredStringsI
 
 module MovesInSquaredStringsII =
