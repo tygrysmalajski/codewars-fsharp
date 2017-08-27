@@ -68,6 +68,7 @@
     <Compile Include="Kyu6\MovesInSquaredStringsIV.fs" />
     <Compile Include="Kyu6\AreTheyTheSame.fs" />
     <Compile Include="Kyu6\SimpsonsRule.fs" />
+    <Compile Include="Kyu5\ClosestAndSmallest.fs" />
     <Compile Include="Program.fs" />
     <None Include="App.config" />
     <Content Include="packages.config" />
