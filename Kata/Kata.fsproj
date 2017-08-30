@@ -70,6 +70,10 @@
     <Compile Include="Kyu6\SimpsonsRule.fs" />
     <Compile Include="Kyu5\ClosestAndSmallest.fs" />
     <Compile Include="Kyu5\JohnAndAnnSignUpForCodewars.fs" />
+    <Compile Include="Kyu4\TwiceLinear.fs">
+      <SubType>
+      </SubType>
+    </Compile>
     <Compile Include="Program.fs" />
     <None Include="App.config" />
     <Content Include="packages.config" />
