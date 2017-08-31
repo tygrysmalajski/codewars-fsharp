@@ -1,6 +1,6 @@
 ﻿namespace Kata.Kyu6
 
-// https://www.codewars.com/kata/550498447451fbbd7600041c
+// https://www.codewars.com/kata/are-they-the-same
 
 module AreTheyTheSame =
 

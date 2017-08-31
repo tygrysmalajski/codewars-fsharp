@@ -1,6 +1,6 @@
 ﻿namespace Kata.Kyu6
 
-// https://www.codewars.com/kata/556deca17c58da83c00002db
+// https://www.codewars.com/kata/tribonacci-sequence
 
 open NUnit.Framework
 open FsUnit

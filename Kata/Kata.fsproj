@@ -72,6 +72,10 @@
     <Compile Include="Kyu6\TakeATenMinuteWalk.fs" />
     <Compile Include="Kyu5\ClosestAndSmallest.fs" />
     <Compile Include="Kyu5\JohnAndAnnSignUpForCodewars.fs" />
+    <Compile Include="Kyu5\WeightForWeight.fs">
+      <SubType>
+      </SubType>
+    </Compile>
     <Compile Include="Kyu4\TwiceLinear.fs" />
     <Compile Include="Kyu4\MagnetParticulesInBoxes.fs" />
     <Compile Include="Program.fs" />

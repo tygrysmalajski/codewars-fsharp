@@ -1,6 +1,6 @@
 ﻿namespace Kata.Kyu7
 
-// https://www.codewars.com/kata/5663f5305102699bad000056
+// https://www.codewars.com/kata/maximum-length-difference
 
 open NUnit.Framework
 open FsUnit

@@ -1,6 +1,6 @@
 ﻿namespace Kata.Kyu7
 
-// https://www.codewars.com/kata/563b662a59afc2b5120000c6
+// https://www.codewars.com/kata/growth-of-a-population
 
 open NUnit.Framework
 open FsUnit
