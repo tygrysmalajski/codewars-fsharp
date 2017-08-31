@@ -2,8 +2,8 @@
 
 // https://www.codewars.com/kata/simpsons-rule-approximate-integration
 
-open FsUnit
 open NUnit.Framework
+open Kata.Asserts
 
 module SimpsonsRule =
     let simpson (n: int) = 
@@ -19,9 +19,6 @@ module SimpsonsRule =
 
     [<Test>]
     let ``Simpson's Rule - Approximate Integration`` () =
-        let assertFuzzyEquals actual expected =
-            actual |> should (equalWithin (abs(actual - expected) <= 1e-10)) expected
-
         assertFuzzyEquals (simpson 290) 1.9999999986
         assertFuzzyEquals (simpson 72) 1.9999996367
         assertFuzzyEquals (simpson 252) 1.9999999975

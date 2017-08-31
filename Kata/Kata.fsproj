@@ -55,6 +55,7 @@
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
+    <Compile Include="Asserts.fs" />
     <Compile Include="Kyu7\MaximumLengthDifference.fs" />
     <Compile Include="Kyu7\PrinterErrors.fs" />
     <Compile Include="Kyu7\PopulationGrowth.fs" />
@@ -69,6 +70,7 @@
     <Compile Include="Kyu6\AreTheyTheSame.fs" />
     <Compile Include="Kyu6\SimpsonsRule.fs" />
     <Compile Include="Kyu5\ClosestAndSmallest.fs" />
+    <Compile Include="Kyu4\MagnetParticulesInBoxes.fs" />
     <Compile Include="Program.fs" />
     <None Include="App.config" />
     <Content Include="packages.config" />

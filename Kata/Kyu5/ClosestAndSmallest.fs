@@ -21,8 +21,8 @@ module ClosestAndSmallest =
             weights
             |> Seq.allPairs weights
             |> Seq.filter (fun (n1, n2) -> n1 <> n2)
-            |> Seq.minBy (fun ((x1, y1, _), (x2, y2, _)) -> (abs(x1-x2), x1, x2, y1, y2))
-            |> (fun ((x1, y1, z1), (x2, y2, z2)) -> ([x1;y1;z1], [x2;y2;z2]))
+            |> Seq.minBy (fun ((w1, i1, _), (w2, i2, _)) -> (abs(w1-w2), w1, w2, i1, i2))
+            |> (fun ((w1, i1, n1), (w2, i2, n2)) -> ([w1;i1;n1], [w2;i2;n2]))
 
         if string = "" then 
             ([],[])
