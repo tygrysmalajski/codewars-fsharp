@@ -76,6 +76,10 @@
       <SubType>
       </SubType>
     </Compile>
+    <Compile Include="Kyu5\IsMyFriendCheating.fs">
+      <SubType>
+      </SubType>
+    </Compile>
     <Compile Include="Kyu4\TwiceLinear.fs" />
     <Compile Include="Kyu4\MagnetParticulesInBoxes.fs" />
     <Compile Include="Program.fs" />
