@@ -31,3 +31,10 @@ module DiseaseSpread =
         assertFuzzyEquals (epidemic 18 432 1004.0 1.0 0.00209 0.51) 420
         assertFuzzyEquals (epidemic 12 288 1007.0 2.0 0.00206 0.45) 461
         assertFuzzyEquals (epidemic 13 312 999.0 1.0 0.00221 0.55) 409
+        assertFuzzyEquals (epidemic 24 576 1005.0 1.0 0.00216 0.45) 474
+        assertFuzzyEquals (epidemic 24 576 982.0 1.0 0.00214 0.44) 460
+        assertFuzzyEquals (epidemic 20 480 1000.0 1.0 0.00199 0.53) 386
+        assertFuzzyEquals (epidemic 28 672 980.0 1.0 0.00198 0.44) 433
+        assertFuzzyEquals (epidemic 14 336 996.0 2.0 0.00206 0.41) 483
+        assertFuzzyEquals (epidemic 13 312 993.0 2.0 0.0021 0.51) 414
+        assertFuzzyEquals (epidemic 28 672 999.0 1.0 0.00197 0.55) 368
